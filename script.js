@@ -187,15 +187,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const loveButton = document.getElementById('loveButton');
     const loveNote = document.getElementById('loveNote');
 
-    loveButton.addEventListener('click', function() {
-        loveNote.classList.toggle('visible');
-        if (loveNote.classList.contains('visible')) {
-            loveButton.textContent = 'Hide My Love Note 💝';
-            createHeartBurst();
-        } else {
-            loveButton.textContent = 'Click for a surprise 💝';
-        }
-    });
+    // keep initial label so we can restore it later (usually Spanish)
+    const loveButtonOriginalText = loveButton ? loveButton.textContent : '';
+
+    if (loveButton && loveNote) {
+        loveButton.addEventListener('click', function() {
+            loveNote.classList.toggle('visible');
+            if (loveNote.classList.contains('visible')) {
+                // show note, switch to hide label in Spanish
+                loveButton.textContent = 'Ocultar mi nota de amor 💝';
+                createHeartBurst();
+            } else {
+                // restore whatever was originally in the HTML (Spanish message)
+                loveButton.textContent = loveButtonOriginalText || 'Haga Click Para Ver Una Sopresita Mi Amor 💝';
+            }
+        });
+    }
 
     // Create heart burst effect
     function createHeartBurst() {
