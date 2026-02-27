@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina De Mi Kristel Preciosa Guapa 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Alex+Brush&family=Allura&family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Music Control -->
+    <div class="music-control">
+        <button id="musicToggle" class="music-btn">🎵</button>
+        <audio id="bgMusic" loop>
+            <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0c6ff1bab.mp3" type="audio/mp3">
+            <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73c3a.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <!-- New amorcitokris audio control -->
+    <div class="music-control" style="top:80px; right:20px;">
+        <span style="color:white; font-weight:bold; margin-right:0.5rem;"></span>
+        <button id="amorToggle" class="music-btn">🎶</button>
+        <audio id="amorMusic">
+            <source src="amorcitokris.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <header class="header">
+            <h1 class="main-title">Feliz 3 Mesesitos </h1>
+            <p class="subtitle" id="subtitle">✨</p>
+        </header>
+
+        
+        <section class="characters-section">
+            <div class="character-container">
+                <div class="character" id="partner">
+                    <div class="character-avatar">
+                        <img src="amor.jpeg" alt="Kristel" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <h3 id="partnerName">Your Love 💕</h3>
+                    <p id="partnerDescription">Mi Kristel Guapa</p>
+                </div>
+                
+                <div class="love-heart">
+                    <svg viewBox="0 0 50 50" class="heart-svg">
+                        <path d="M25 45 C25 45, 5 25, 5 15 C5 10, 10 5, 15 5 C20 5, 25 10, 25 15 C25 10, 30 5, 35 5 C40 5, 45 10, 45 15 C45 25, 25 45, 25 45 Z" fill="#FF69B4"/>
+                    </svg>
+                </div>
+
+                <div class="character" id="you">
+                    <div class="character-avatar">
+                        <img src="yop.jpeg" alt="You" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <h3 id="yourName">Me 💙</h3>
+                    <p id="yourDescription">Forever yours</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Love Section -->
+        <section class="interaction-section">
+            <button id="loveButton" class="love-btn">Haga Click Para Ver Una Sopresita Mi Amor 💝</button>
+            <div id="loveNote" class="love-note">
+                <p id="loveNoteText"> </p>
+            </div>
+        </section>
+
+        <!-- Memory Gallery -->
+        <section class="memory-gallery">
+            <h2>Nuestros hermosos momentos juntos💫</h2>
+            <div class="memories-grid">
+                <div class="memory-card" data-memory="late-night">
+                    <div class="memory-icon">🌙</div>
+                    <h3>Nuestras charlas de noche</h3>
+                    <p id="memoryLateNight">a</p>
+                </div>
+                <div class="memory-card" data-memory="first-meeting">
+                    <div class="memory-icon">💫</div>
+                    <h3>El dia que nos vimos por primera vez</h3>
+                    <p id="memoryFirstMeeting"></p>
+                </div>
+                <div class="memory-card" data-memory="care">
+                    <div class="memory-icon">💕</div>
+                    <h3>Tu forma de ser</h3>
+                    <p id="memoryCare"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Love Meter -->
+        <section class="love-meter-section">
+            <h2>Lo Mucho Que Te Amo 💕</h2>
+            <div class="love-meter">
+                <div class="meter-fill"></div>
+                <span class="love-percentage">∞%</span>
+            </div>
+        </section>
+
+        <!-- Kiss Counter Game -->
+        <section class="game-section">
+            <h2>Besitos Virtuales💋</h2>
+            <div class="kiss-counter">
+                <span id="kissCount">0</span>
+                <button id="kissButton" class="kiss-btn">Enviar Besitos 💋</button>
+            </div>
+            <div class="kiss-effects"></div>
+        </section>
+
+        <!-- Special Message -->
+        <section class="special-message">
+            <div class="message-container">
+                <h2 id="specialMessageTitle">Para mi querida</h2>
+                <p id="specialMessage1">.</p>
+                <p id="specialMessage2"></p>
+                <div class="signature" id="signature"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
